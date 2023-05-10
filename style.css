@@ -1,0 +1,143 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 20% 2.5fr 1fr;
+    grid-template-rows: 20% 1fr 1fr;
+}
+
+.menu {
+    background-color: aquamarine;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.menu .logo {
+    width: 80%;
+    height: 60px;
+
+    background-color: rgb(30, 229, 255);
+}
+
+.menu .items-1 {
+    width: 80%;
+    height: 260px;
+
+    background-color: rgb(30, 229, 255);
+}
+
+.menu .items-2 {
+    width: 80%;
+    height: 160px;
+
+    background-color: rgb(30, 229, 255);
+}
+
+.header {
+    background-color: rgb(157, 255, 127);
+
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .top {
+    width: 90%;
+    height: 60px;
+
+    background-color: rgb(60, 255, 0);
+}
+
+.header .bottom {
+    width: 90%;
+    height: 60px;
+
+    background-color: rgb(60, 255, 0);
+}
+
+.projects {
+    background-color: rgb(255, 195, 127);
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.project-items {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+}
+
+.projects div {
+    background-color: rgb(253, 147, 27);
+}
+
+.announcements {
+    background-color: rgb(255, 127, 127);
+
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.announcements-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.announcements-items div {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(255, 84, 84);
+}
+
+.trending {
+    background-color: rgb(127, 178, 255);
+
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.trending-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.trending-items div {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(29, 119, 253);
+}
