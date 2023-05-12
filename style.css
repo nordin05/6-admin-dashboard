@@ -1,22 +1,36 @@
-:root {
-    --menu-bg-color: #ce68ce;
-    --menu-text-color: #fdd3fd;
+* {
+    --menu-bg-color: hsl(300, 51%, 61%);
+    --menu-text-color: hsl(300, 91%, 91%);
+    --header-bg-color: hsl(0, 0%, 100%);
+    --header-text-color: hsl(216, 85%, 8%);
+    --button-bg-color: hsl(285, 48%, 72%);
+    --button-text-color: hsl(300, 69%, 97%);
     font-family: 'Roboto', sans-serif;
-  }
-
-body, p {
-    margin: 0px;
-    font-size: 36px;
 }
+
+p {
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(268, 59%, 83%);
+    margin: 0px;
+}
+
+/*==============================================================*/
 
 .container {
     height: 100vh;
-    width: 100vw;
+    width: 1260px;
 
     display: grid;
     grid-template-columns: 20% 2.5fr 1fr;
     grid-template-rows: 20% 1fr 1fr;
 }
+
+/*========================= MENU ===============================*/
 
 .menu {
     background-color: var(--menu-bg-color);
@@ -32,6 +46,8 @@ body, p {
     padding-left: 15px;
 }
 
+/*========================= HEADER - LOGO ===============================*/
+
 .menu .logo {
     display: flex;
     flex-direction: column;
@@ -44,6 +60,7 @@ body, p {
     display: inline-flex;
     justify-content: flex-start;;
     align-items: center;
+    font-size: 36px;
     gap: 5px;
 
     color: var(--menu-text-color);
@@ -78,8 +95,11 @@ body, p {
     fill: var(--menu-text-color);
 }
 
+/*========================= HEADER ===============================*/
+
 .header {
-    background-color: rgb(157, 255, 127);
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
 
     grid-column: 2 / 4;
     grid-row: 1 / 2;
@@ -91,19 +111,103 @@ body, p {
     gap: 20px;
 }
 
+/*========================= HEADER - TOP ===============================*/
+
 .header .top {
     width: 90%;
     height: 60px;
-
-    background-color: rgb(60, 255, 0);
+    display: grid;
+    grid-template-columns: 40px 7fr 1fr 3fr;
+    align-items: center;
 }
+
+.header .top svg {
+    width: 30px;
+    fill: var(--header-text-color);
+}
+
+.header .top input[type=text] {
+    height: 25px;
+    border-radius: 20px;;
+    background-color: hsl(284deg 17.31% 84.76%);
+    border: none;
+}
+
+.header .top .profile-small {
+    grid-column: 4 / 5;
+
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-small .profile-img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header .top img {
+    height: 80px;
+    width: auto;
+    translate: -18px 0px;
+}
+
+/*========================= HEADER - BOTTOM ===============================*/
 
 .header .bottom {
     width: 90%;
     height: 60px;
-
-    background-color: rgb(60, 255, 0);
+    display: grid;
+    grid-template-columns: 70px 4fr 1fr 2fr;
+    align-items: center;
+    grid-gap: 5px;
+    font-size: 24px;
 }
+
+.header .bottom .text p:first-child {
+    font-size: 16px;
+    padding-bottom: 3px;
+}
+
+.header .bottom .profile-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header .bottom img {
+    height: 100px;
+    width: auto;
+    translate: -21px 0px;
+}
+
+.header .bottom .buttons {
+    grid-column: 4 / 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.buttons button {
+    width: 85px;
+    height: 37px;
+    border-radius: 20px;
+    border: none;
+
+    font-size: 18px;
+
+    color: var(--button-text-color);
+    background-color: var(--button-bg-color);
+}
+
+/*========================= PROJECTS ===============================*/
 
 .projects {
     background-color: rgb(255, 195, 127);
