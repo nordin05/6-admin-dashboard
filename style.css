@@ -1,5 +1,12 @@
-body {
+:root {
+    --menu-bg-color: #ce68ce;
+    --menu-text-color: #fdd3fd;
+    font-family: 'Roboto', sans-serif;
+  }
+
+body, p {
     margin: 0px;
+    font-size: 36px;
 }
 
 .container {
@@ -12,37 +19,63 @@ body {
 }
 
 .menu {
-    background-color: aquamarine;
+    background-color: var(--menu-bg-color);
 
     grid-column: 1 / 2;
     grid-row: 1 / 4;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    padding-top: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 15px;
+    padding-left: 15px;
 }
 
 .menu .logo {
-    width: 80%;
-    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    background-color: rgb(30, 229, 255);
+    color: var(--menu-text-color);
 }
 
-.menu .items-1 {
-    width: 80%;
-    height: 260px;
+.menu .logo p {
+    display: inline-flex;
+    justify-content: flex-start;;
+    align-items: center;
+    gap: 5px;
 
-    background-color: rgb(30, 229, 255);
+    color: var(--menu-text-color);
 }
 
-.menu .items-2 {
-    width: 80%;
-    height: 160px;
+.menu .logo svg {
+    width: 50px;
+    fill: var(--menu-text-color);
+}
 
-    background-color: rgb(30, 229, 255);
+.menu .items-1, .menu .items-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    padding-left: 10px;
+}
+
+.menu .items-1 p, .menu .items-2 p {
+    font-size: 26px;
+    display: inline-flex;
+    justify-content: flex-start;;
+    align-items: center;
+    gap: 20px;
+
+    color: var(--menu-text-color);
+}
+
+.menu .items-1 svg, .menu .items-2 svg {
+    width: 24px;
+    fill: var(--menu-text-color);
 }
 
 .header {
