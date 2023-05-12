@@ -115,7 +115,7 @@ body {
 
 .header .top {
     width: 90%;
-    height: 60px;
+    height: 30%;
     display: grid;
     grid-template-columns: 40px 7fr 1fr 3fr;
     align-items: center;
@@ -160,7 +160,7 @@ body {
 
 .header .bottom {
     width: 90%;
-    height: 60px;
+    height: 30%;
     display: grid;
     grid-template-columns: 70px 4fr 1fr 2fr;
     align-items: center;
