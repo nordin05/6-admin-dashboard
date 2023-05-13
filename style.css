@@ -25,6 +25,7 @@ body {
 h1 {
     font-size: 26px;
     font-weight: 400;
+    animation: menuOpacityIN 5s;
 }
 
 h2 {
@@ -175,8 +176,6 @@ h2 {
 
 .header .top, .header .bottom {
     animation: headerIN 3s, headerOPACITYin 3s;
-    /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
-    /* translate: 0px -200px; */
 }
 
 @keyframes headerIN {
@@ -324,6 +323,21 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     background-color: var(--header-bg-color);
+
+    animation: ITEMin 4s;
+}
+
+@keyframes ITEMin{
+    0% {opacity: 0;
+        scale: 0.9;
+    }
+    40% {opacity: 0;
+        animation-timing-function: cubic-bezier(0.8, 0, 0.45, 1);
+        scale: 0.9;
+    }
+    100% {opacity: 1;
+        scale: 1;
+    }
 }
 
 .project-items .left-color {
@@ -408,6 +422,8 @@ h2 {
     border-radius: 10px;
     padding: 30px;
     gap: 10px;
+
+    animation: ITEMin 4s;
 }
 
 .announcements-items .divider {
@@ -457,6 +473,8 @@ h2 {
     border-radius: 10px;
     padding: 20px;
     gap: 10px;
+
+    animation: ITEMin 4s;
 }
 
 .trending-items .item {
