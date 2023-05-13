@@ -33,6 +33,10 @@ h2 {
     margin: 0;
 }
 
+.project-items .item, .announcements-items, .trending-items {
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.20);
+}
+
 /*==============================================================*/
 
 .container {
@@ -238,7 +242,7 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    padding-right: 0px;
+    padding-right: 10px;
 }
 
 .project-items {
@@ -257,7 +261,6 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     background-color: var(--header-bg-color);
-    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.35);
 }
 
 .project-items .left-color {
@@ -360,7 +363,7 @@ h2 {
 /*========================= TRENDING ===============================*/
 
 .trending {
-    background-color: rgb(127, 178, 255);
+    background-color: var(--projects-bg-color);
 
     grid-column: 3 / 4;
     grid-row: 3 / 4;
@@ -368,17 +371,73 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    padding: 20px;
+    padding-top: 0px;
 }
+
+.trending h1 {
+    font-size: 20px;
+}
+
+.trending h2 {
+    font-size: 15px;
+}
+
 
 .trending-items {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    
+    background-color: var(--header-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
 }
 
-.trending-items div {
+.trending-items .item {
     width: 200px;
     height: 50px;
-    background-color: rgb(29, 119, 253);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.trending-items .item p {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-top: 2px;
+}
+
+.item .profile-img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.item:first-child .profile-img img {
+    height: 55px;
+    width: auto;
+    translate: -5px -5px;
+}
+
+.item:nth-child(2) .profile-img img {
+    height: 100px;
+    width: auto;
+    translate: 0px -20px;
+}
+
+.item:nth-child(3) .profile-img img {
+    height: 55px;
+    width: auto;
+    translate: -5px -10px;
+}
+
+.item:nth-child(4) .profile-img img {
+    height: 55px;
+    width: auto;
+    translate: -14px 0px;
 }
