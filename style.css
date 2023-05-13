@@ -173,6 +173,31 @@ h2 {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
+.header .top, .header .bottom {
+    animation: headerIN 3s, headerOPACITYin 3s;
+    /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    /* translate: 0px -200px; */
+}
+
+@keyframes headerIN {
+    0% {translate: 0px -100px;
+    }
+    40% {translate: 0px -100px;
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    }
+    100% {translate: 0px 0px;}
+}
+
+@keyframes headerOPACITYin{
+    0% {opacity: 0;
+    }
+    40% {opacity: 0;
+        animation-timing-function: cubic-bezier(0.7, 0, 0.45, 1);
+    }
+    100% {opacity: 1;
+    }
+}
+
 /*========================= HEADER - TOP ===============================*/
 
 .header .top {
