@@ -28,6 +28,8 @@ body {
     display: grid;
     grid-template-columns: 20% 2.5fr 1fr;
     grid-template-rows: 20% 1fr 1fr;
+
+    overflow: hidden;
 }
 
 /*========================= MENU ===============================*/
@@ -44,6 +46,8 @@ body {
     gap: 40px;
     padding-top: 15px;
     padding-left: 15px;
+
+    z-index: 2;
 }
 
 /*========================= HEADER - LOGO ===============================*/
@@ -109,6 +113,9 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 /*========================= HEADER - TOP ===============================*/
@@ -210,26 +217,94 @@ body {
 /*========================= PROJECTS ===============================*/
 
 .projects {
-    background-color: rgb(255, 195, 127);
+    background-color: hsl(285, 17%, 91%);;
 
     grid-column: 2 / 3;
     grid-row: 2 / 4;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 20px;
+}
+
+.projects h1 {
+    font-size: 26px;
+    font-weight: 400;
 }
 
 .project-items {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
-.projects div {
-    background-color: rgb(253, 147, 27);
+.project-items .item {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr;
+    grid-template-rows: 20% 1fr 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: hsl(282.86deg 19% 80%);
 }
+
+.project-items .left-color {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    z-index: 1;
+    background-color: var(--menu-bg-color);
+}
+
+.project-items h2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px;
+    z-index: 1;
+}
+
+.project-items p {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    padding-left: 20px;
+    z-index: 1;
+}
+
+.project-items .icons {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-items svg {
+    width: 22px;
+    fill: hsl(300deg 66.31% 21.78% / 75%);
+    z-index: 1;
+}
+
+.project-items img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.45;
+    
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
+
+/*========================= ANNOUNCEMENTS ===============================*/
 
 .announcements {
     background-color: rgb(255, 127, 127);
