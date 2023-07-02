@@ -2,4 +2,4 @@
 
 Dashboard design project for The Odin Project.
 
-live: https://nordin05.github.io/admin-dashboard/
+live: https://nordin05.github.io/6-admin-dashboard/
